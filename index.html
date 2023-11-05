@@ -11,21 +11,41 @@
 <body>
     <main>
         <h1>Сервис комментариев со спам-фильтром</h1>
-        <section>
-            <h2>Оставьте Ваш комментарий</h2>
-            <form action="">
+        <section class="sendcomment">
+            <h2 class="sendcomment__h2">Оставьте Ваш комментарий</h2>
+            <div class="sendcomment__checkname">
+                <label for="checkname">Показывать ваше имя?</label>
+                <label>Yes<input type="radio" class="checkname" name="radio" value="Yes" checked /></label>
+                <label>No<input type="radio" class="checkname" name="radio" value="No" /></label>
+            </div>
+            <form class="sendcomment__name">
                 <p>Введите Ваше имя</p>
-                <input type="text" name="username">
+                <input type="text" id="username" name="username" placeholder="Введите Ваше имя или никнейм">
             </form>
             <form action="">
                 <p>Введите ссылку Вашего аватара</p>
-                <input type="link" name="user-avatar-link">
+                <input type="link" class="user-avatar-link" name="user-avatar-link">
             </form>
+            <div class="comment">
+                <label for="usercomment">Оставьте Ваш комментарий:</label>
+                <textarea id="usercomment" placeholder="Оставьте комментарий"></textarea>
+            </div>
+            <button class="button" type="button">Отправить</button>
         </section>
-        <section>
-            <h2>Чат</h2>
+        <section class="chat">
+            <h2 class="chat__h2">Чат</h2>
+            <div class="chat__userinfo">
+                <img src="" class="user-avatar" alt="avatar"></img>
+                <p class="resultusername"></p>
+            </div>
+            <div class="chat__date">
+                <p class="date"></p>
+            </div>
+            <p class="chat__message"></p>
         </section>
     </main>
+
+    <script src="assets/script/index.js"></script>
 </body>
 
 </html>
